@@ -39,7 +39,7 @@ In my opinion, this is much better.  It's a sort of an in-between of Python's `s
 
 ~~~js
 function log(msg) {
-    var log_text = f("{hour}:{minute}:{second} - log_message",
+    var log_text = f("{hour}:{minute}:{second} - {log_message}",
         {
             hour: current_hour,
             minute: current_minute,
