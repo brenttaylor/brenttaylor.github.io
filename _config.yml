@@ -18,15 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: d100 Advocate's Mad Musings
-email: your-email@example.com
+title: BTaylor's Fuzzy Logic Studios
+#email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi! I talk about and make tabletop RPG stuff.  I'm a game developer and designer at heart
-  with a passion for games of all kinds.
+  Computer programmer, game developer, educator and content creator.  Game development is my jam, whether it
+  be video games, board games or tabletop RPG's.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://d100advocate.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://fuzzylogicstudios.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: B_Taylor_
-#github_username:  jekyll
+github_username:  jekyll
 
 # other config
 paginate: 5
