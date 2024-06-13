@@ -4,7 +4,7 @@ title:  "Better Logging in GameMaker Studio 2"
 date:   2021-11-30
 author: Brent Taylor
 categories: [tutorial]
-tags: [game maker]
+tags: Game-Maker-Studio
 ---
 
 Logging is fundamental to development in every industry I can personally think of.  It's also something we spend so very little effort to keep clean and easy to use.  How often have we written code like this?

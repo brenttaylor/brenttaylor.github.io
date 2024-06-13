@@ -1,13 +1,9 @@
 ---
-layout: blog
+layout: default
 title: BTaylor's Blog
 ---
 {% for post in paginator.posts %}
-    <h1 class="blog-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <span class="meta">Author: {{post.author}}, Date: {{post.date | date_to_string }}</span>
-    <div class="post">
-      {{post.content}}
-    </div>
+  {% include blogpost.html post=post %}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}

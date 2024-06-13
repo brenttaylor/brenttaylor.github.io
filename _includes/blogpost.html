@@ -1,0 +1,12 @@
+<h1 class="blog-title"><a href="{{ include.post.url }}">{{ include.post.title }}</a></h1>
+<span class="meta">
+    Author: {{ include.post.author}}, 
+    Date: {{ include.post.date | date_to_string }},
+    Tags:
+    {% for tag in include.post.tags %}
+        <a href="/tags">#{{ tag }}</a>
+    {% endfor %}
+</span>
+<div class="post">
+    {{ include.post.content }}
+</div>

@@ -3,7 +3,7 @@ layout: post
 title:  "Unity State Machines and Movement?"
 date:   2021-04-03
 categories: [tutorial]
-tags: [unity, bolt]
+tags: Unity Bolt
 ---
 
 {% include youtube.html id="lYgFfF9B2Qg" %}

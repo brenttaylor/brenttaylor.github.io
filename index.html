@@ -8,11 +8,7 @@ title: BTaylor's Fuzzy Logic Studios
 
 <div class="article">
     {% for post in site.posts limit:5 %}
-        <h1 class="blog-title"><a href="{{post.url}}">{{post.title}}</a></h1>
-        <span class="meta">Author: {{post.author}}, Date: {{post.date | date_to_string }}</span>
-        <div class="post">
-            {{post.content}}
-        </div>
+        {% include blogpost.html post=post %}
         <hr />
     {% endfor %}
 </div>
