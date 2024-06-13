@@ -2,13 +2,14 @@
 layout: post
 title:  "Better Logging in GameMaker Studio 2"
 date:   2021-11-30
+author: Brent Taylor
 categories: [tutorial]
 tags: [game maker]
 ---
 
 Logging is fundamental to development in every industry I can personally think of.  It's also something we spend so very little effort to keep clean and easy to use.  How often have we written code like this?
 
-~~~js
+~~~javascript
 function log(msg) {
     show_debug_message(string(current_hour) + ":" + string(current_minute) + ":"
       + string(current_second) + " - " + string(msg));
@@ -17,7 +18,7 @@ function log(msg) {
 
 When called to give information on a variable, it looks something like this:
 
-~~~js
+~~~javascript
 log("Var with error equals: " + some_var)
 ~~~
 A line is printed to the console like this: "20:51:52 - Var with error equals: 298"
@@ -29,7 +30,7 @@ Other languages, such as Python, have much better ways of handling situations li
 
 Let's look at how we might want string concatenation or substitution to look like in GameMaker Studio.
 
-~~~js
+~~~javascript
 var my_text = f("Hello {subject}!", {subject: "world"});
 ~~~
 This should produce: "Hello world!"
@@ -37,7 +38,7 @@ This should produce: "Hello world!"
 
 In my opinion, this is much better.  It's a sort of an in-between of Python's `string.fmt` method and Python's `f` strings.  Let's see what our logging function might look like with this new approach.
 
-~~~js
+~~~javascript
 function log(msg) {
     var log_text = f("{hour}:{minute}:{second} - {log_message}",
         {
@@ -56,7 +57,7 @@ This is much longer, but it's also significantly easier to read and maintain.
 
 So what does our `f` function look like?
 
-~~~js
+~~~javascript
 function f(msg, data_pairs = noone) { // concatenation isn't always desired
                                       // so set `data_pairs` to `noone` by default
     // If `data_pairs` isn't provided, it's just a string so we can just return it

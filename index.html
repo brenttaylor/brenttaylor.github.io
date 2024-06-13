@@ -1,0 +1,26 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: d100 Advocate's Mad Musings
+---
+
+<div class="article">
+    {% for post in site.posts limit:5 %}
+        <h1 class="blog-title"><a href="{{post.url}}">{{post.title}}</a></h1>
+        <span class="meta">Author: {{post.author}}, Date: {{post.date | date_to_string }}</span>
+        <div class="post">
+            {{post.content}}
+        </div>
+        <hr />
+    {% endfor %}
+</div>
+<div class="sidebar">
+    <h3>Recent Posts</h3>
+    <ul>
+        {% for post in site.posts limit:15 %}
+            <li><a href="{{post.url}}">{{post.title}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
